@@ -31,16 +31,13 @@ def compare_string(goal, our_string):
     score = 0
     for i in range(len(goal)):
         if goal[i] == our_string[i]:
-            lis.append(i)
             score += 1
-    return score
+    return score / len(goal)
 
-goal = "aaron"
+goal = "aarfwefwefwegwrgwegronnnnn"
 goal_len = len(goal)
-
 alphabet = string.ascii_lowercase + " "
-
-count = 0
+best = 0
 while True:
 
     our_string = generate_string(goal_len)
@@ -50,8 +47,8 @@ while True:
         print(our_string, goal_len, current_score)
         break
 
-    count += 1
+    if current_score > best:
+        best = current_score
+        print(best)
 
-    if count % 1000 == 0:
-        print(count)
 
