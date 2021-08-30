@@ -15,7 +15,6 @@ def score(goal, test_string):
     return num_same / len(goal)
 
 def main():
-
     goal_string = "methinks it is like a weasel"
     new_string = generate_one(28)
     best = 0
